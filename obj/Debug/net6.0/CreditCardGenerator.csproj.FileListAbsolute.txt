@@ -1,0 +1,15 @@
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\CreditCardGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\CreditCardGenerator.AssemblyInfoInputs.cache
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\CreditCardGenerator.AssemblyInfo.cs
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\CreditCardGenerator.csproj.CoreCompileInputs.cache
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\CreditCardGenerator.sourcelink.json
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\bin\Debug\net6.0\CreditCardGenerator.exe
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\bin\Debug\net6.0\CreditCardGenerator.deps.json
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\bin\Debug\net6.0\CreditCardGenerator.runtimeconfig.json
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\bin\Debug\net6.0\CreditCardGenerator.dll
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\bin\Debug\net6.0\CreditCardGenerator.pdb
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\CreditCardGenerator.dll
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\refint\CreditCardGenerator.dll
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\CreditCardGenerator.pdb
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\CreditCardGenerator.genruntimeconfig.cache
+C:\Users\filip\OneDrive\Pulpit\projekt\CreditCardGenerator\obj\Debug\net6.0\ref\CreditCardGenerator.dll
