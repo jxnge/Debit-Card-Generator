@@ -8,14 +8,17 @@
 
     static void CreditCardInfo()
     {
-        //tutaj naprawić wygląd kart
+        //dodać expire date i currency
         Console.WriteLine("Pass your name");
         string name = Console.ReadLine();
         Console.WriteLine("Pass your surname");
         string surname = Console.ReadLine();
-        int[] credit_card = CreditCard();
-        string company = Company(CreditCard());
-        Console.WriteLine($"Name: {name}, Surname: {surname}, Credit Card: {credit_card}, Company: {company}");
+        int[] credit_cardArray = CreditCard();
+        string credit_card = string.Join("", credit_cardArray.Select(x => x.ToString()).ToArray());
+        string company = Company(credit_cardArray);
+        int[] cvcArray = Cvc(company);
+        string cvc = string.Join("", cvcArray.Select(x => x.ToString()).ToArray());
+        Console.WriteLine($"Name: {name}, Surname: {surname}, Credit Card: {credit_card}, Company: {company}, CVC: {cvc}");
     }   
 
 
@@ -57,6 +60,7 @@
             {
                 credit_card[i] = 0;
             }
+              
         }
 
         for (int i = 2; i < 16; i += 2)
@@ -95,8 +99,6 @@
                 }
             }
         }   
-
-
         return credit_card;
     }
 
@@ -124,5 +126,28 @@
         {
             return "Unknown";
         }   
+    }
+
+    static int[] Cvc(string company)
+    {
+        Random rnd = new Random();
+        if (company == "American Express")
+        {
+            int[] cvc = new int[4];
+            for (int i = 0; i < 4; i++)
+            {
+                cvc[i] = rnd.Next(0, 10);
+            }
+            return cvc;
+        }
+        else
+        {
+            int[] cvc = new int[3];
+            for (int i = 0; i < 3; i++)
+            {
+                cvc[i] = rnd.Next(0, 10);
+            }
+            return cvc;
+        }
     }
 }
