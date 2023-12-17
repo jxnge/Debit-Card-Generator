@@ -8,6 +8,9 @@
 
     static void CreditCardInfo()
     {
+        string[] currencies = { "USD", "EUR", "GBP", "CHF", "PLN", "JPY", "CNY", "RUB" };
+        string[] companies = { "AMEX", "VISA", "MASTERCARD", "DISCOVER" };
+
         //dodać expire date i currency
         Console.WriteLine("Pass your name");
         string name = Console.ReadLine();
@@ -15,35 +18,30 @@
         string surname = Console.ReadLine();
         Console.WriteLine("Choose currency: USD / EUR / GBP / CHF / PLN / JPY / CNY / RUB");
         string currency = Console.ReadLine().ToUpper();
+        Console.WriteLine("Choose card company: AMEX (American Express) / VISA / MASTERCARD / DISCOVER");
+        string company = Console.ReadLine().ToUpper();
         Console.WriteLine("\n");
-        if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname))
+        if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname) && companies.Contains(company) && currencies.Contains(currency))
         {
-            if (Currencies().Contains(currency))
-            {
                 name = char.ToUpper(name[0]) + name.Substring(1);
                 surname = char.ToUpper(surname[0]) + surname.Substring(1);
-                int[] credit_cardArray = CreditCard();
+                int[] credit_cardArray = CreditCard(company);
                 string credit_card = string.Join("", credit_cardArray.Select(x => x.ToString()).ToArray());
                 credit_card = credit_card.Insert(4, " ");
                 credit_card = credit_card.Insert(9, " ");
                 credit_card = credit_card.Insert(14, " ");
-                string company = Company(credit_cardArray);
                 int[] cvcArray = Cvc(company);
                 string cvc = string.Join("", cvcArray.Select(x => x.ToString()).ToArray());
                 string expiration_date = expirationDate();
                 Console.WriteLine($"Name: {name}\nSurname: {surname}\nCurrency: {currency}\nCredit Card: {credit_card}\nCompany: {company}\nExpiration Date: {expiration_date}\nCVC: {cvc}");
-            } else
-            {
-                Console.WriteLine("You haven't passed correct currency.");
-            }
         }else
         {
-            Console.WriteLine("You haven't passed your name or surname.");
+            Console.WriteLine("Something went wrong. You haven't passed your name, surname, valid currency or valid card company.");
         }
     }   
 
 
-    static int[] CreditCard()
+    static int[] CreditCard(string company)
     {
         //card example: 1234 5678 9012 3456
 
@@ -56,8 +54,23 @@
             sumOfDigits = rnd.Next(10, 121);
         }
         int[] potentialNumbers = { 6, 8, 10, 12 };
-        int randomNumber = rnd.Next(0, 4);
-        int firstDigit = potentialNumbers[randomNumber];
+        int firstDigit = 0;
+        if (company == "AMEX") 
+        {   
+            firstDigit = 6;
+        }
+        else if (company == "VISA")
+        {
+            firstDigit = 8;
+        }
+        else if (company == "MASTERCARD")
+        {
+            firstDigit = 10;
+        }
+        else if (company == "DISCOVER")
+        {
+            firstDigit = 12;
+        }
         credit_card[0] = firstDigit / 2;
         if (firstDigit > 9)
         {
@@ -123,32 +136,6 @@
         return credit_card;
     }
 
-    static string Company(int[] credit_card)
-    {   
-        int firstDigit = credit_card[0];
-
-        if (firstDigit == 3)
-        {
-            return "American Express";
-        }
-        else if (firstDigit == 4)
-        {
-            return "Visa";
-        }
-        else if (firstDigit == 5)
-        {
-            return "MasterCard";
-        }
-        else if (firstDigit == 6)
-        {
-            return "Discover";
-        }
-        else
-        {
-            return "Unknown";
-        }   
-    }
-
     static int[] Cvc(string company)
     {
         Random rnd = new Random();
@@ -180,11 +167,5 @@
         string year = DateTime.Now.ToString("yy");
         int yearInt = Int32.Parse(year) + 5;
         return $"{month}/{yearInt}";
-    }
-
-    static string[] Currencies()
-    {
-        string[] currency = { "USD", "EUR", "GBP", "CHF", "PLN", "JPY", "CNY", "RUB" };
-        return currency;
     }
 }
