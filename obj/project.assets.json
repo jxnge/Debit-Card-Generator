@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\CreditCardGenerator.csproj",
-      "projectName": "CreditCardGenerator",
-      "projectPath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\CreditCardGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\DebitCardGenerator.csproj",
+      "projectName": "DebitCardGenerator",
+      "projectPath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\DebitCardGenerator.csproj",
       "packagesPath": "C:\\Users\\filip\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\obj\\",
       "projectStyle": "PackageReference",

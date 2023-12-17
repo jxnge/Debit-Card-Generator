@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J/uyBh/1pyXkTsbCY6/3BuisljIX2qnQSKFq9iI5LZ0xaFeyPiLOh/yZCRDrnjc/OOFxhjv8ruE7z/xSrSHgrA==",
+  "dgSpecHash": "1dEYxWaqs5X7Bo8Wa+so//gKVe1o+wHxreFAYZejYchTx29tMyN7h5TS49oijXDyDtbHlyKLzHXNDCXby9OvEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\CreditCardGenerator.csproj",
+  "projectFilePath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\DebitCardGenerator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

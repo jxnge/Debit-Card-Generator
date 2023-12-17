@@ -1,0 +1,15 @@
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\bin\Debug\net6.0\DebitCardGenerator.exe
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\bin\Debug\net6.0\DebitCardGenerator.deps.json
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\bin\Debug\net6.0\DebitCardGenerator.runtimeconfig.json
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\bin\Debug\net6.0\DebitCardGenerator.dll
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\bin\Debug\net6.0\DebitCardGenerator.pdb
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\DebitCardGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\DebitCardGenerator.AssemblyInfoInputs.cache
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\DebitCardGenerator.AssemblyInfo.cs
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\DebitCardGenerator.csproj.CoreCompileInputs.cache
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\DebitCardGenerator.sourcelink.json
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\DebitCardGenerator.dll
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\refint\DebitCardGenerator.dll
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\DebitCardGenerator.pdb
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\DebitCardGenerator.genruntimeconfig.cache
+C:\Users\filip\OneDrive\Pulpit\projekt\DebitCardGenerator\obj\Debug\net6.0\ref\DebitCardGenerator.dll
