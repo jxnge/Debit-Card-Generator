@@ -13,23 +13,32 @@
         string name = Console.ReadLine();
         Console.WriteLine("Pass your surname");
         string surname = Console.ReadLine();
+        Console.WriteLine("Choose currency: USD / EUR / GBP / CHF / PLN / JPY / CNY / RUB");
+        string currency = Console.ReadLine().ToUpper();
+        Console.WriteLine("\n");
         if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname))
         {
-            name = char.ToUpper(name[0]) + name.Substring(1);
-            surname = char.ToUpper(surname[0]) + surname.Substring(1);
-        
-        int[] credit_cardArray = CreditCard();
-        string credit_card = string.Join("", credit_cardArray.Select(x => x.ToString()).ToArray());
-        credit_card = credit_card.Insert(4, " ");
-        credit_card = credit_card.Insert(9, " ");
-        credit_card = credit_card.Insert(14, " ");
-        string company = Company(credit_cardArray);
-        int[] cvcArray = Cvc(company);
-        string cvc = string.Join("", cvcArray.Select(x => x.ToString()).ToArray());
-        Console.WriteLine($"Company: {company}, Currency: , Name: {name}, Surname: {surname}, Credit Card: {credit_card}, Expiration Date: , CVC: {cvc}");
+            if (Currencies().Contains(currency))
+            {
+                name = char.ToUpper(name[0]) + name.Substring(1);
+                surname = char.ToUpper(surname[0]) + surname.Substring(1);
+                int[] credit_cardArray = CreditCard();
+                string credit_card = string.Join("", credit_cardArray.Select(x => x.ToString()).ToArray());
+                credit_card = credit_card.Insert(4, " ");
+                credit_card = credit_card.Insert(9, " ");
+                credit_card = credit_card.Insert(14, " ");
+                string company = Company(credit_cardArray);
+                int[] cvcArray = Cvc(company);
+                string cvc = string.Join("", cvcArray.Select(x => x.ToString()).ToArray());
+                string expiration_date = expirationDate();
+                Console.WriteLine($"Name: {name}\nSurname: {surname}\nCurrency: {currency}\nCredit Card: {credit_card}\nCompany: {company}\nExpiration Date: {expiration_date}\nCVC: {cvc}");
+            } else
+            {
+                Console.WriteLine("You haven't passed correct currency.");
+            }
         }else
         {
-            Console.WriteLine("You haven't passed your name or surname");
+            Console.WriteLine("You haven't passed your name or surname.");
         }
     }   
 
@@ -161,5 +170,21 @@
             }
             return cvc;
         }
+    }
+
+    static string expirationDate()
+    {
+        Random rnd = new Random();
+        DateTime currentDateTime = DateTime.Now;
+        string month = DateTime.Now.ToString("MM");
+        string year = DateTime.Now.ToString("yy");
+        int yearInt = Int32.Parse(year) + 5;
+        return $"{month}/{yearInt}";
+    }
+
+    static string[] Currencies()
+    {
+        string[] currency = { "USD", "EUR", "GBP", "CHF", "PLN", "JPY", "CNY", "RUB" };
+        return currency;
     }
 }
