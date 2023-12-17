@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\CreditCardGenerator\\CreditCardGenerator.csproj": {}
+    "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\CreditCardGenerator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\CreditCardGenerator\\CreditCardGenerator.csproj": {
+    "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\CreditCardGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\CreditCardGenerator\\CreditCardGenerator.csproj",
+        "projectUniqueName": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\CreditCardGenerator.csproj",
         "projectName": "CreditCardGenerator",
-        "projectPath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\CreditCardGenerator\\CreditCardGenerator.csproj",
+        "projectPath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\CreditCardGenerator.csproj",
         "packagesPath": "C:\\Users\\filip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\CreditCardGenerator\\obj\\",
+        "outputPath": "C:\\Users\\filip\\OneDrive\\Pulpit\\projekt\\DebitCardGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -29,11 +29,11 @@
                 string debit_card = string.Join("", debit_cardArray.Select(x => x.ToString()).ToArray());
                 debit_card = debit_card.Insert(4, " ");
                 debit_card = debit_card.Insert(9, " ");
-            debit_card = debit_card.Insert(14, " ");
+                debit_card = debit_card.Insert(14, " ");
                 int[] cvcArray = Cvc(company);
                 string cvc = string.Join("", cvcArray.Select(x => x.ToString()).ToArray());
                 string expiration_date = expirationDate();
-                Console.WriteLine($"Name: {name}\nSurname: {surname}\nCurrency: {currency}\nDebit Card: {debit_card}\nCompany: {company}\nExpiration Date: {expiration_date}\nCVC: {cvc}");
+                Console.WriteLine($"Name: {name}\nSurname: {surname}\nCurrency: {currency}\nCard Company: {company}\nDebit Card: {debit_card}\nExpiration Date: {expiration_date}\nCVC: {cvc}");
         }else
         {
             Console.WriteLine("Something went wrong. You haven't passed your name, surname, valid currency or valid card company.");
