@@ -3,10 +3,10 @@
     private static void Main(string[] args)
     {
         
-        CreditCardInfo();
+        DebitCardInfo();
     }
 
-    static void CreditCardInfo()
+    static void DebitCardInfo()
     {
         string[] currencies = { "USD", "EUR", "GBP", "CHF", "PLN", "JPY", "CNY", "RUB" };
         string[] companies = { "AMEX", "VISA", "MASTERCARD", "DISCOVER" };
