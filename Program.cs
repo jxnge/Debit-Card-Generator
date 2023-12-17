@@ -25,15 +25,15 @@
         {
                 name = char.ToUpper(name[0]) + name.Substring(1);
                 surname = char.ToUpper(surname[0]) + surname.Substring(1);
-                int[] credit_cardArray = CreditCard(company);
-                string credit_card = string.Join("", credit_cardArray.Select(x => x.ToString()).ToArray());
-                credit_card = credit_card.Insert(4, " ");
-                credit_card = credit_card.Insert(9, " ");
-                credit_card = credit_card.Insert(14, " ");
+                int[] debit_cardArray = DebitCard(company);
+                string debit_card = string.Join("", debit_cardArray.Select(x => x.ToString()).ToArray());
+                debit_card = debit_card.Insert(4, " ");
+                debit_card = debit_card.Insert(9, " ");
+            debit_card = debit_card.Insert(14, " ");
                 int[] cvcArray = Cvc(company);
                 string cvc = string.Join("", cvcArray.Select(x => x.ToString()).ToArray());
                 string expiration_date = expirationDate();
-                Console.WriteLine($"Name: {name}\nSurname: {surname}\nCurrency: {currency}\nCredit Card: {credit_card}\nCompany: {company}\nExpiration Date: {expiration_date}\nCVC: {cvc}");
+                Console.WriteLine($"Name: {name}\nSurname: {surname}\nCurrency: {currency}\nDebit Card: {debit_card}\nCompany: {company}\nExpiration Date: {expiration_date}\nCVC: {cvc}");
         }else
         {
             Console.WriteLine("Something went wrong. You haven't passed your name, surname, valid currency or valid card company.");
@@ -41,17 +41,17 @@
     }   
 
 
-    static int[] CreditCard(string company)
+    static int[] DebitCard(string company)
     {
         //card example: 1234 5678 9012 3456
 
-        int[] credit_card = new int[16];
+        int[] debit_card = new int[16];
 
         Random rnd = new Random();
         int sumOfDigits = 1;
         while (sumOfDigits % 10 != 0)
         {
-            sumOfDigits = rnd.Next(10, 121);
+            sumOfDigits = rnd.Next(20, 121);
         }
         int[] potentialNumbers = { 6, 8, 10, 12 };
         int firstDigit = 0;
@@ -71,7 +71,7 @@
         {
             firstDigit = 12;
         }
-        credit_card[0] = firstDigit / 2;
+        debit_card[0] = firstDigit / 2;
         if (firstDigit > 9)
         {
             firstDigit -= 9;
@@ -86,13 +86,13 @@
         {
             int nextDigit = rnd.Next(0, 10);
             if (nextDigit <= restOfDigits)
-            {   
-                credit_card[i] = nextDigit;
+            {
+                debit_card[i] = nextDigit;
                 restOfDigits -= nextDigit;
             }
             else
             {
-                credit_card[i] = 0;
+                debit_card[i] = 0;
             }
               
         }
@@ -105,16 +105,16 @@
                 restOfDigits -= nextDigit;
                 if (nextDigit % 2 != 0)
                 {
-                    credit_card[i] = (nextDigit + 9) / 2;
+                    debit_card[i] = (nextDigit + 9) / 2;
                 }
                 else
                 {
-                    credit_card[i] = nextDigit / 2;
+                    debit_card[i] = nextDigit / 2;
                 }   
             }
             else
             {
-                credit_card[i] = 0;
+                debit_card[i] = 0;
             }
         }
 
@@ -125,21 +125,21 @@
             {
                 if (restOfDigits > 0)
                 {
-                    if (credit_card[i] < 9)
+                    if (debit_card[i] < 9)
                     {
-                        credit_card[i]++;
+                        debit_card[i]++;
                         restOfDigits--;
                     }
                 }
             }
         }   
-        return credit_card;
+        return debit_card;
     }
 
     static int[] Cvc(string company)
     {
         Random rnd = new Random();
-        if (company == "American Express")
+        if (company == "AMEX")
         {
             int[] cvc = new int[4];
             for (int i = 0; i < 4; i++)
