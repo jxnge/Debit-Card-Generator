@@ -13,12 +13,24 @@
         string name = Console.ReadLine();
         Console.WriteLine("Pass your surname");
         string surname = Console.ReadLine();
+        if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname))
+        {
+            name = char.ToUpper(name[0]) + name.Substring(1);
+            surname = char.ToUpper(surname[0]) + surname.Substring(1);
+        
         int[] credit_cardArray = CreditCard();
         string credit_card = string.Join("", credit_cardArray.Select(x => x.ToString()).ToArray());
+        credit_card = credit_card.Insert(4, " ");
+        credit_card = credit_card.Insert(9, " ");
+        credit_card = credit_card.Insert(14, " ");
         string company = Company(credit_cardArray);
         int[] cvcArray = Cvc(company);
         string cvc = string.Join("", cvcArray.Select(x => x.ToString()).ToArray());
-        Console.WriteLine($"Name: {name}, Surname: {surname}, Credit Card: {credit_card}, Company: {company}, CVC: {cvc}");
+        Console.WriteLine($"Company: {company}, Currency: , Name: {name}, Surname: {surname}, Credit Card: {credit_card}, Expiration Date: , CVC: {cvc}");
+        }else
+        {
+            Console.WriteLine("You haven't passed your name or surname");
+        }
     }   
 
 
@@ -32,7 +44,7 @@
         int sumOfDigits = 1;
         while (sumOfDigits % 10 != 0)
         {
-            sumOfDigits = rnd.Next(10, 141);
+            sumOfDigits = rnd.Next(10, 121);
         }
         int[] potentialNumbers = { 6, 8, 10, 12 };
         int randomNumber = rnd.Next(0, 4);
@@ -52,7 +64,7 @@
         {
             int nextDigit = rnd.Next(0, 10);
             if (nextDigit <= restOfDigits)
-            {
+            {   
                 credit_card[i] = nextDigit;
                 restOfDigits -= nextDigit;
             }
