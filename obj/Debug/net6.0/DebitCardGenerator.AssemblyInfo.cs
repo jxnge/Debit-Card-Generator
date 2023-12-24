@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DebitCardGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fabe581f292d6219bb97b19465a9e40d83a3812")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+913e3aa5edfa4379bc3e75989250c322f3f0a43b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DebitCardGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DebitCardGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
